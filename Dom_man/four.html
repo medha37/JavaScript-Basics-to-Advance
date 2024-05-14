@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Mani[ulation Page - 4</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: aliceblue;
+        }
+    </style>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</head>
+<body class="bg-black">
+    <script>
+        function addLanguage(langName){
+            const li = document.createElement('li');
+            li.innerHTML = `${langName}`;
+            document.querySelector('.language').appendChild(li);
+        }
+        addLanguage('python');
+        addLanguage('typescript');
+
+        function addOptiLanguage(langName){
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(langName))
+            document.querySelector('.language').appendChild(li);
+        }
+        addOptiLanguage('java');
+    </script>
+    
+</body>
+</html>
